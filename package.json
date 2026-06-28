@@ -1,0 +1,18 @@
+{
+  "name": "discord-vc-bot",
+  "version": "1.0.0",
+  "description": "Discord bot with voice channel join/leave commands",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.17.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
