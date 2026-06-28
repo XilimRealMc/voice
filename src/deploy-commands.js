@@ -22,11 +22,11 @@ const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
     console.log(`[DEPLOY] Deploying ${commands.length} slash command(s)...`);
 
     await rest.put(
-      Routes.applicationCommands(process.env.CLIENT_ID),
+      Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
       { body: commands }
     );
 
-    console.log("[DEPLOY] ✅ Slash commands berhasil di-deploy secara global!");
+    console.log("[DEPLOY] ✅ Slash commands berhasil di-deploy ke server!");
   } catch (error) {
     console.error("[DEPLOY] ❌ Gagal deploy:", error);
   }
