@@ -24,7 +24,7 @@ for (const file of commandFiles) {
   }
 }
 
-client.once("ready", () => {
+client.once("clientReady", () => {
   console.log(`[BOT] Logged in as ${client.user.tag}`);
   client.user.setActivity("🎙️ /join | /leave");
 });
